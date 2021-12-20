@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create customer</title>
+</head>
+<body>
+<h1>Create customer</h1>
+<p>
+    <a href="/customers">Customer list</a>
+</p>
+<form method="post">
+    <input type="text" name="firstName">
+    <input type="text" name="lastName">
+    <select name="province">
+        <option th:each="pro : ${provinces}" th:value="${pro.getId()}" th:text="${pro.getName()}"></option>
+    </select>
+    <button>Thêm</button>
+</form>
+</body>
+</html>
